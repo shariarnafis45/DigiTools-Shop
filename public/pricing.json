@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "planName": "Basic",
+    "price": 0,
+    "currency": "USD",
+    "billingCycle": "monthly",
+    "description": "Perfect for individuals just getting started.",
+    "features": [
+      { "name": "1 User Account" },
+      { "name": "Basic Support" },
+      { "name": "Access to Core Features" },
+      { "name": "1GB Storage" }
+    ],
+    "isRecommended": false,
+    "buttonText": "Start for Free"
+  },
+  {
+    "id": 2,
+    "planName": "Pro",
+    "price": 19,
+    "currency": "USD",
+    "billingCycle": "monthly",
+    "description": "Ideal for professionals and freelancers.",
+    "features": [
+      { "name": "Up to 5 User Accounts" },
+      { "name": "Priority Email Support" },
+      { "name": "Access to Premium Features" },
+      { "name": "50GB Storage" },
+      { "name": "Advanced Analytics" }
+    ],
+    "isRecommended": true,
+    "buttonText": "Upgrade to Pro"
+  },
+  {
+    "id": 3,
+    "planName": "Enterprise",
+    "price": 49,
+    "currency": "USD",
+    "billingCycle": "monthly",
+    "description": "For scaling teams and organizations.",
+    "features": [
+      { "name": "Unlimited User Accounts" },
+      { "name": "24/7 Dedicated Support" },
+      { "name": "Custom Integrations" },
+      { "name": "Unlimited Storage" },
+      { "name": "Advanced Analytics" },
+      { "name": "Custom Onboarding" }
+    ],
+    "isRecommended": false,
+    "buttonText": "Contact Sales"
+  }
+]
