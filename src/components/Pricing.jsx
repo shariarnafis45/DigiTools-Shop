@@ -6,7 +6,7 @@ const Pricing = ({ pricingDataPromise }) => {
   return (
     <div className="max-w-[1200px] mx-auto py-28 px-5">
       <div className="text-center">
-        <h2 className="text-5xl font-extrabold text-[#101727]">
+        <h2 className="text-4xl font-extrabold text-[#101727]">
           Simple, Transparent Pricing
         </h2>
         <p className="font-medium text-[#627382] mt-3">
@@ -16,7 +16,7 @@ const Pricing = ({ pricingDataPromise }) => {
       <div className="mt-14  grid sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-8">
         {pricingData.map((pricing) => {
           return (
-            <div className={`card ${pricing.planName === "Pro" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" : "bg-base-200"}  shadow-md rounded-lg relative flex flex-col h-full hover:-translate-y-3 transition`}>
+            <div className={`card ${pricing.planName === "Pro" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" : "bg-base-200"}  shadow-md rounded-lg relative flex flex-col h-full hover:-translate-y-3 transition max-w-sm`}>
               <div className="card-body">
                 <span
                   className={`badge badge-lg badge-warning ${pricing.planName === "Pro" ? "block" : "hidden"} absolute -top-3 right-[35%]`}

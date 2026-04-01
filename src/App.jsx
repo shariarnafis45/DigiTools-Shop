@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
 import Pricing from "./components/Pricing";
 import Stats from "./components/Stats";
+import Cta from "./components/Cta";
 
 const pricingPromise = async () => {
   const res = await fetch("/public/pricing.json");
@@ -24,6 +25,7 @@ function App() {
         <Suspense fallback={<p>Loading..</p>}>
           <Pricing  pricingDataPromise={pricingDataPromise}/>
         </Suspense>
+        <Cta/>
       </main>
     </>
   );

@@ -11,10 +11,10 @@ const Hero = () => {
           <img src={Banner} className="rounded-lg " />
           <div className="text-center lg:text-left">
             <div className="badge badge-soft badge-primary text-[#9514FA] font-medium mb-2"><GoDotFill /> New: AI-Powered Tools Available</div>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl  font-extrabold leading-14 sm:leading-20 text-[#101727]">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl  font-extrabold leading-10 sm:leading-20 text-[#101727]">
               Supercharge Your Digital Workflow
             </h1>
-            <p className="py-6 text-[1.1rem] leading-5 text-[#627382]">
+            <p className="py-6 text-[1rem] leading-5 text-[#627382]">
               Access premium AI tools, design assets, templates, and
               productivity <br />
               software—all in one place. Start creating faster today. Explore
