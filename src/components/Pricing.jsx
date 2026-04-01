@@ -19,7 +19,7 @@ const Pricing = ({ pricingDataPromise }) => {
             <div key={i} className={`card ${pricing.planName === "Pro" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" : "bg-base-200"}  shadow-md rounded-lg relative flex flex-col h-full hover:-translate-y-3 transition max-w-sm`}>
               <div className="card-body">
                 <span
-                  className={`badge badge-lg badge-warning ${pricing.planName === "Pro" ? "block" : "hidden"} absolute -top-3 right-[35%]`}
+                  className={`badge badge-lg badge-warning ${pricing.planName === "Pro" ? "block" : "hidden"} absolute -top-3 right-1/2 translate-x-1/2`}
                 >
                   Most Popular
                 </span>

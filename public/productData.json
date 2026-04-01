@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "AI Resume Builder",
+    "description": "Create professional resumes in minutes.\nOptimized for ATS systems.",
+    "price": 9,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "icon": "FileText",
+    "image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4"
+  },
+  {
+    "id": 2,
+    "name": "Social Media Kit",
+    "description": "Ready-to-use social media designs.\nBoost your online presence.",
+    "price": 19,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["500+ templates", "Editable files", "Instagram & Facebook sizes"],
+    "icon": "Instagram",
+    "image": "https://images.unsplash.com/photo-1611162616475-46b635cb6868"
+  },
+  {
+    "id": 3,
+    "name": "Website UI Kit",
+    "description": "Modern UI components for web projects.\nSave hours of design time.",
+    "price": 29,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["200+ components", "Figma ready", "Responsive layouts"],
+    "icon": "Layout",
+    "image": "https://images.unsplash.com/photo-1559028012-481c04fa702d"
+  },
+  {
+    "id": 4,
+    "name": "SEO Optimization Tool",
+    "description": "Improve your website ranking.\nGet real-time SEO suggestions.",
+    "price": 15,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Keyword analysis", "On-page SEO tips", "Competitor tracking"],
+    "icon": "Search",
+    "image": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07"
+  },
+  {
+    "id": 5,
+    "name": "Email Marketing Suite",
+    "description": "Create and manage campaigns easily.\nIncrease your conversion rate.",
+    "price": 25,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Automation workflows", "Email templates", "Analytics dashboard"],
+    "icon": "Mail",
+    "image": "https://images.unsplash.com/photo-1557838923-2985c318be48"
+  },
+  {
+    "id": 6,
+    "name": "Logo Maker Pro",
+    "description": "Design logos instantly.\nPerfect for startups and brands.",
+    "price": 12,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["AI logo generator", "High-res download", "Custom branding kit"],
+    "icon": "PenTool",
+    "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d"
+  },
+  {
+    "id": 7,
+    "name": "Portfolio Builder",
+    "description": "Build your personal portfolio website.\nNo coding required.",
+    "price": 10,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Drag & drop builder", "Custom domains", "Mobile responsive"],
+    "icon": "User",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+  },
+  {
+    "id": 8,
+    "name": "Video Editing Toolkit",
+    "description": "Edit videos like a pro.\nPerfect for content creators.",
+    "price": 35,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Transitions & effects", "4K export", "Preset library"],
+    "icon": "Video",
+    "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d"
+  }
+]

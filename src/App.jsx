@@ -7,13 +7,20 @@ import Pricing from "./components/Pricing";
 import Stats from "./components/Stats";
 import Cta from "./components/Cta";
 import Footer from "./components/Footer";
+import Products from "./components/Products";
 
 const pricingPromise = async () => {
   const res = await fetch("/public/pricing.json");
   return res.json();
 };
+
+const productsDataPromise = async () => {
+  const res = await fetch("/public/productData.json");
+  return res.json();
+};
 function App() {
   const pricingDataPromise = pricingPromise();
+  const productsPromise = productsDataPromise();
   return (
     <>
       <header>
@@ -22,14 +29,17 @@ function App() {
       </header>
       <main>
         <Stats />
-        <GetStart />
-        <Suspense fallback={<p>Loading..</p>}>
-          <Pricing  pricingDataPromise={pricingDataPromise}/>
+        <Suspense fallback={<p></p>}>
+          <Products productsPromise={productsPromise} />
         </Suspense>
-        <Cta/>
+        <GetStart />
+        <Suspense fallback={<p></p>}>
+          <Pricing pricingDataPromise={pricingDataPromise} />
+        </Suspense>
+        <Cta />
       </main>
       <footer>
-        <Footer/>
+        <Footer />
       </footer>
     </>
   );
