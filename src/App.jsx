@@ -7,15 +7,16 @@ import Pricing from "./components/Pricing";
 import Stats from "./components/Stats";
 import Cta from "./components/Cta";
 import Footer from "./components/Footer";
-import Products from "./components/ProductsContainer";
+import ProductsContainer from "./components/ProductsContainer";
+import { ToastContainer } from "react-toastify";
 
 const pricingPromise = async () => {
-  const res = await fetch("/public/pricing.json");
+  const res = await fetch("/pricing.json");
   return res.json();
 };
 
 const productsDataPromise = async () => {
-  const res = await fetch("/public/productData.json");
+  const res = await fetch("/productData.json");
   return res.json();
 };
 function App() {
@@ -30,7 +31,7 @@ function App() {
       <main>
         <Stats />
         <Suspense fallback={<p></p>}>
-          <Products productsPromise={productsPromise} />
+          <ProductsContainer productsPromise={productsPromise} />
         </Suspense>
         <GetStart />
         <Suspense fallback={<p></p>}>
@@ -41,6 +42,8 @@ function App() {
       <footer>
         <Footer />
       </footer>
+
+      <ToastContainer/>
     </>
   );
 }
