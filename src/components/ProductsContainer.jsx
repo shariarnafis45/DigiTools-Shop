@@ -1,10 +1,11 @@
 import React, { use, useState } from "react";
-import ProductsCard from "./ProductsCard";
+import ProductsCardContainer from "./ProductsCardContainer"
 import CartProducts from "./CartProducts";
 
-const Products = ({ productsPromise }) => {
+const ProductsContainer = ({ productsPromise }) => {
   const productsData = use(productsPromise);
   const [tab,SetTab] = useState("products")
+  const [cartProducts, setCartProduct] = useState([])
   
   return (
     <div className="max-w-[1200px] mx-auto py-28 px-7">
@@ -20,11 +21,11 @@ const Products = ({ productsPromise }) => {
       </div>
       <div className="flex justify-center mt-5">
         <button onClick={()=> SetTab("products")} className={`btn rounded-full hover:bg-white  border-none ${tab === "products" && "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" } `}>Products</button>
-        <button onClick={()=> SetTab("cart")} className={`btn rounded-full hover:bg-white  border-none ${tab === "cart" && "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" } `}>Cart<span>(0)</span></button>
+        <button onClick={()=> SetTab("cart")} className={`btn rounded-full hover:bg-white  border-none ${tab === "cart" && "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" } `}>Cart<span>({cartProducts.length})</span></button>
       </div>
       <div>
         {
-            tab === "products" ? <ProductsCard productsData={productsData}/> : <CartProducts/>
+            tab === "products" ? <ProductsCardContainer productsData={productsData} setCartProduct={setCartProduct} cartProducts={cartProducts}/> : <CartProducts cartProducts={cartProducts} setCartProduct={setCartProduct}/>
         }
       </div>
 
@@ -32,4 +33,4 @@ const Products = ({ productsPromise }) => {
   );
 };
 
-export default Products;
+export default ProductsContainer;

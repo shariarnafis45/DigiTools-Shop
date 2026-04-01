@@ -7,7 +7,7 @@ import Pricing from "./components/Pricing";
 import Stats from "./components/Stats";
 import Cta from "./components/Cta";
 import Footer from "./components/Footer";
-import Products from "./components/Products";
+import Products from "./components/ProductsContainer";
 
 const pricingPromise = async () => {
   const res = await fetch("/public/pricing.json");

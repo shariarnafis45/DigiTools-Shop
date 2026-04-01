@@ -1,12 +1,52 @@
-import React from 'react';
+import React from "react";
+import { MdDelete } from "react-icons/md";
 
-const CartProducts = () => {
-    return (
-        <div>
-            
-            
+const CartProducts = ({ setCartProduct, cartProducts }) => {
+  return (
+    <div className="card shadow-sm bg-base-200 sm:p-10  mt-12">
+      {cartProducts.length !== 0 ? (
+        <div className="space-y-5">
+          <h2 className="text-2xl font-bold">Your Cart</h2>
+          <div className="space-y-6">
+            {cartProducts.map((cartProduct, i) => (
+              <div
+                key={i}
+                className="flex justify-between items-center bg-base-300 p-5 rounded-lg "
+              >
+                <div className="flex gap-4">
+                  <div className="bg-[#9514FA]/10 max-w-[50px] p-2 rounded-full flex justify-center items-center">
+                    <img src={cartProduct.icon} alt="" className="" />
+                  </div>
+                  <div>
+                    <h2 className=" font-semibold">{cartProduct.name}</h2>
+                    <p className="font-medium">$ {cartProduct.price}</p>
+                  </div>
+                </div>
+                <button className="btn text-2xl btn-ghost text-red-600 rounded-full">
+                  <MdDelete />
+                </button>
+              </div>
+            ))}
+          </div>
+          <div className="flex justify-between">
+            <h3 className="text-xl font-semibold">Total :</h3>
+            <p className="text-3xl font-extrabold">$ 78</p>
+          </div>
+          <div className="mt-auto">
+            <button
+              className={`btn  w-full rounded-full  bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white`}
+            >
+              Proceed to Checkout
+            </button>
+          </div>
         </div>
-    );
+      ) : (
+        <div>
+            <h2 className="text-2xl font-bold text-center">Your Cart Is Empty</h2>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default CartProducts;

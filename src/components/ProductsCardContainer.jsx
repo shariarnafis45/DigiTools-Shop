@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
-const ProductsCard = ({ productsData }) => {
+const ProductsCard = ({ productsData, setCartProduct, cartProducts }) => {
+
+  const handleBuyNow = (product) => {
+    
+    setCartProduct([...cartProducts, product]);
+  };
   return (
-    <div className="mt-15 grid grid-cols-3 gap-8">
+    <div className="mt-15 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
       {productsData.map((product, i) => (
         <div key={i}>
           <div
@@ -16,15 +21,15 @@ const ProductsCard = ({ productsData }) => {
               </span>
               <div className="">
                 <div className="bg-[#9514FA]/10 max-w-[70px] p-3 rounded-full mb-5">
-                  <img src={product.icon} alt="" className="" />    
+                  <img src={product.icon} alt="" className="" />
                 </div>
                 <h2 className="text-3xl font-bold">{product.name}</h2>
                 <p className={`font-medium  mt-2`}>{product.description}</p>
                 <p className={`text-2xl mt-3 text-[#627382]`}>
-                  
                   <span className={`font-bold text-4xl text-[#101727]`}>
                     ${product.price}
-                  </span> /{product.period}
+                  </span>{" "}
+                  /{product.period}
                 </p>
               </div>
               <ul className="mt-6 flex flex-col gap-2 text-xs mb-4">
@@ -50,9 +55,10 @@ const ProductsCard = ({ productsData }) => {
               </ul>
               <div className="mt-auto">
                 <button
+                  onClick={() => handleBuyNow(product)}
                   className={`btn  w-full rounded-full  bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white`}
                 >
-                  Buy Now
+                  buy
                 </button>
               </div>
             </div>
