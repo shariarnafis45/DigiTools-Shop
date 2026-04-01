@@ -8,8 +8,7 @@
     "tag": "popular",
     "tagType": "popular",
     "features": ["100+ templates", "ATS optimization", "Export to PDF"],
-    "icon": "FileText",
-    "image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4"
+    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828919.png"
   },
   {
     "id": 2,
@@ -20,8 +19,7 @@
     "tag": "best seller",
     "tagType": "best seller",
     "features": ["500+ templates", "Editable files", "Instagram & Facebook sizes"],
-    "icon": "Instagram",
-    "image": "https://images.unsplash.com/photo-1611162616475-46b635cb6868"
+    "icon": "https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
   },
   {
     "id": 3,
@@ -32,8 +30,7 @@
     "tag": "new",
     "tagType": "new",
     "features": ["200+ components", "Figma ready", "Responsive layouts"],
-    "icon": "Layout",
-    "image": "https://images.unsplash.com/photo-1559028012-481c04fa702d"
+    "icon": "https://cdn-icons-png.flaticon.com/512/1827/1827933.png"
   },
   {
     "id": 4,
@@ -44,8 +41,7 @@
     "tag": "popular",
     "tagType": "popular",
     "features": ["Keyword analysis", "On-page SEO tips", "Competitor tracking"],
-    "icon": "Search",
-    "image": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07"
+    "icon": "https://cdn-icons-png.flaticon.com/512/622/622669.png"
   },
   {
     "id": 5,
@@ -56,8 +52,7 @@
     "tag": "best seller",
     "tagType": "best seller",
     "features": ["Automation workflows", "Email templates", "Analytics dashboard"],
-    "icon": "Mail",
-    "image": "https://images.unsplash.com/photo-1557838923-2985c318be48"
+    "icon": "https://cdn-icons-png.flaticon.com/512/561/561127.png"
   },
   {
     "id": 6,
@@ -68,8 +63,7 @@
     "tag": "new",
     "tagType": "new",
     "features": ["AI logo generator", "High-res download", "Custom branding kit"],
-    "icon": "PenTool",
-    "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d"
+    "icon": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
   },
   {
     "id": 7,
@@ -80,8 +74,7 @@
     "tag": "popular",
     "tagType": "popular",
     "features": ["Drag & drop builder", "Custom domains", "Mobile responsive"],
-    "icon": "User",
-    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+    "icon": "https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
   },
   {
     "id": 8,
@@ -92,7 +85,6 @@
     "tag": "best seller",
     "tagType": "best seller",
     "features": ["Transitions & effects", "4K export", "Preset library"],
-    "icon": "Video",
-    "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d"
+    "icon": "https://cdn-icons-png.flaticon.com/512/727/727245.png"
   }
 ]

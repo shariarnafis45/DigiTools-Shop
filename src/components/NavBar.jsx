@@ -4,7 +4,7 @@ import { IoCartOutline } from "react-icons/io5";
 
 const NavBar = () => {
   return (
-    <div className="shadow-sm py-1">
+    <div className="shadow-sm py-1  bg-white">
       <div className="navbar max-w-[1200px] mx-auto bg-base-100 ">
         <div className="navbar-start">
           <div className="dropdown">
