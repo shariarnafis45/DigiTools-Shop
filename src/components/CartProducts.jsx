@@ -2,6 +2,11 @@ import React from "react";
 import { MdDelete } from "react-icons/md";
 
 const CartProducts = ({ setCartProduct, cartProducts }) => {
+  // const totalPrice = cartProducts.reduce((sum, item) => sum + item.price, 0);
+  let sum = 0;
+  for (let i of cartProducts) {
+    sum = sum + i.price;
+  }
   return (
     <div className="card shadow-sm bg-base-200 sm:p-10  mt-12">
       {cartProducts.length !== 0 ? (
@@ -30,7 +35,7 @@ const CartProducts = ({ setCartProduct, cartProducts }) => {
           </div>
           <div className="flex justify-between">
             <h3 className="text-xl font-semibold">Total :</h3>
-            <p className="text-3xl font-extrabold">$ 78</p>
+            <p className="text-3xl font-extrabold">$ {sum}</p>
           </div>
           <div className="mt-auto">
             <button
@@ -42,7 +47,7 @@ const CartProducts = ({ setCartProduct, cartProducts }) => {
         </div>
       ) : (
         <div>
-            <h2 className="text-2xl font-bold text-center">Your Cart Is Empty</h2>
+          <h2 className="text-2xl font-bold text-center">Your Cart Is Empty</h2>
         </div>
       )}
     </div>

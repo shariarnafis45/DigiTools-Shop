@@ -2,10 +2,11 @@ import React, { use, useState } from "react";
 import ProductsCardContainer from "./ProductsCardContainer"
 import CartProducts from "./CartProducts";
 
-const ProductsContainer = ({ productsPromise }) => {
+const ProductsContainer = ({ productsPromise, setCartItemCount }) => {
+  const [cartProducts, setCartProduct] = useState([])
   const productsData = use(productsPromise);
   const [tab,SetTab] = useState("products")
-  const [cartProducts, setCartProduct] = useState([])
+  
   
   return (
     <div className="max-w-[1200px] mx-auto py-28 px-7">
@@ -25,7 +26,7 @@ const ProductsContainer = ({ productsPromise }) => {
       </div>
       <div>
         {
-            tab === "products" ? <ProductsCardContainer productsData={productsData} setCartProduct={setCartProduct} cartProducts={cartProducts}/> : <CartProducts cartProducts={cartProducts} setCartProduct={setCartProduct}/>
+            tab === "products" ? <ProductsCardContainer setCartItemCount={setCartItemCount} productsData={productsData} setCartProduct={setCartProduct} cartProducts={cartProducts}/> : <CartProducts cartProducts={cartProducts} setCartProduct={setCartProduct}/>
         }
       </div>
 

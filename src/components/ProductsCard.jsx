@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 
-const ProductsCard = ({ product, cartProducts, setCartProduct }) => {
+const ProductsCard = ({ product, cartProducts, setCartProduct,setCartItemCount }) => {
   const [isBuyClicked, setIsBuyClicked] = useState(false);
   const handleBuyNow = (product) => {
+    
     toast.success(`${product.name} added to cart`, {
-      position: "top-center",
+      position: "top-right",
     });
     setIsBuyClicked(true);
     setCartProduct([...cartProducts, product]);
+    setCartItemCount(cartProducts.length)
+    
+    
   };
   return (
     <div>
@@ -57,6 +61,7 @@ const ProductsCard = ({ product, cartProducts, setCartProduct }) => {
           </ul>
           <div className="mt-auto">
             <button
+            type="button"
               onClick={() => handleBuyNow(product)}
               className={`btn  w-full rounded-full ${isBuyClicked ? "bg-green-500 text-white" : "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"} `}
             >

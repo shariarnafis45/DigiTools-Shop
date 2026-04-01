@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import "./App.css";
 import GetStart from "./components/GetStart";
 import Hero from "./components/Hero";
@@ -20,8 +20,10 @@ const productsDataPromise = async () => {
   return res.json();
 };
 function App() {
+  const [cartItemCount , setCartItemCount] = useState(0)
   const pricingDataPromise = pricingPromise();
   const productsPromise = productsDataPromise();
+  
   return (
     <>
       <header>
@@ -31,7 +33,7 @@ function App() {
       <main>
         <Stats />
         <Suspense fallback={<p></p>}>
-          <ProductsContainer productsPromise={productsPromise} />
+          <ProductsContainer setCartItemCount={setCartItemCount} productsPromise={productsPromise} />
         </Suspense>
         <GetStart />
         <Suspense fallback={<p></p>}>
