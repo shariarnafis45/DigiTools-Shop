@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Pricing from "./components/Pricing";
 import Stats from "./components/Stats";
 import Cta from "./components/Cta";
+import Footer from "./components/Footer";
 
 const pricingPromise = async () => {
   const res = await fetch("/public/pricing.json");
@@ -27,6 +28,9 @@ function App() {
         </Suspense>
         <Cta/>
       </main>
+      <footer>
+        <Footer/>
+      </footer>
     </>
   );
 }

@@ -14,9 +14,9 @@ const Pricing = ({ pricingDataPromise }) => {
         </p>
       </div>
       <div className="mt-14  grid sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-8">
-        {pricingData.map((pricing) => {
+        {pricingData.map((pricing, i) => {
           return (
-            <div className={`card ${pricing.planName === "Pro" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" : "bg-base-200"}  shadow-md rounded-lg relative flex flex-col h-full hover:-translate-y-3 transition max-w-sm`}>
+            <div key={i} className={`card ${pricing.planName === "Pro" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white" : "bg-base-200"}  shadow-md rounded-lg relative flex flex-col h-full hover:-translate-y-3 transition max-w-sm`}>
               <div className="card-body">
                 <span
                   className={`badge badge-lg badge-warning ${pricing.planName === "Pro" ? "block" : "hidden"} absolute -top-3 right-[35%]`}
@@ -37,8 +37,8 @@ const Pricing = ({ pricingDataPromise }) => {
                   </p>
                 </div>
                 <ul className="mt-6 flex flex-col gap-2 text-xs mb-4">
-                  {pricing.features.map((feature) => (
-                    <li>
+                  {pricing.features.map((feature, i) => (
+                    <li key={i}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="size-4 me-2 inline-block text-success"

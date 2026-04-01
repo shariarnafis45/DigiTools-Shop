@@ -6,7 +6,7 @@ import RocketIcon from "../assets/rocket.png"
 const GetStart = () => {
   return (
     <div className="bg-[#F9FAFC]">
-      <div className="py-28 max-w-[1200px] mx-auto px-5">
+      <div className="py-20 max-w-[1200px] mx-auto px-5">
         <div className="text-center">
           <h2 className="text-5xl font-extrabold text-[#101727]">
             Get Started in 3 Steps
