@@ -22,7 +22,7 @@ const CartProducts = ({ setCartProduct, cartProducts }) => {
     setCartProduct([]);
   };
   return (
-    <div className="card shadow-sm bg-base-200 sm:p-10  mt-12">
+    <div className="card shadow-sm bg-base-200 p-3 sm:p-10  mt-12">
       {cartProducts.length !== 0 ? (
         <div className="space-y-5">
           <h2 className="text-2xl font-bold">Your Cart</h2>
