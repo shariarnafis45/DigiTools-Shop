@@ -1,5 +1,6 @@
 import React from "react";
 import { MdDelete } from "react-icons/md";
+import { toast } from "react-toastify";
 
 const CartProducts = ({ setCartProduct, cartProducts }) => {
   // const totalPrice = cartProducts.reduce((sum, item) => sum + item.price, 0);
@@ -7,6 +8,19 @@ const CartProducts = ({ setCartProduct, cartProducts }) => {
   for (let i of cartProducts) {
     sum = sum + i.price;
   }
+  const handleDeleteBtn = (product)=> {
+    toast.warning(`${product.name} Removed From Cart`, {
+          position: "top-right",
+        });
+    const newCartProducts = cartProducts.filter(p=> p.id !== product.id)
+    setCartProduct(newCartProducts)
+  }
+  const handleProceedToCheckout = () => {
+    toast.success("Ready to Checkout", {
+      position: "top-right",
+    });
+    setCartProduct([]);
+  };
   return (
     <div className="card shadow-sm bg-base-200 sm:p-10  mt-12">
       {cartProducts.length !== 0 ? (
@@ -27,7 +41,7 @@ const CartProducts = ({ setCartProduct, cartProducts }) => {
                     <p className="font-medium">$ {cartProduct.price}</p>
                   </div>
                 </div>
-                <button className="btn text-2xl btn-ghost text-red-600 rounded-full">
+                <button onClick={()=>handleDeleteBtn(cartProduct)} className="btn text-2xl btn-ghost text-red-600 rounded-full">
                   <MdDelete />
                 </button>
               </div>
@@ -39,6 +53,7 @@ const CartProducts = ({ setCartProduct, cartProducts }) => {
           </div>
           <div className="mt-auto">
             <button
+              onClick={handleProceedToCheckout}
               className={`btn  w-full rounded-full  bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white`}
             >
               Proceed to Checkout

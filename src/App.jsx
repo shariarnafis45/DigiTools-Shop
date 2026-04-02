@@ -34,6 +34,7 @@ function App() {
         <Suspense fallback={<p></p>}>
           <ProductsContainer
             setCartProduct={setCartProduct}
+            setCartProduct={setCartProduct}
             cartProducts={cartProducts}
             productsPromise={productsPromise}
           />
