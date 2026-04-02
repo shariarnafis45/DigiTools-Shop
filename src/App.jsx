@@ -14,26 +14,29 @@ const pricingPromise = async () => {
   const res = await fetch("/pricing.json");
   return res.json();
 };
-
 const productsDataPromise = async () => {
   const res = await fetch("/productData.json");
   return res.json();
 };
+const pricingDataPromise = pricingPromise();
+const productsPromise = productsDataPromise();
+
 function App() {
-  const [cartItemCount , setCartItemCount] = useState(0)
-  const pricingDataPromise = pricingPromise();
-  const productsPromise = productsDataPromise();
-  
+  const [cartProducts, setCartProduct] = useState([]);
   return (
     <>
       <header>
-        <NavBar></NavBar>
+        <NavBar cartProducts={cartProducts}/>
         <Hero />
       </header>
       <main>
         <Stats />
         <Suspense fallback={<p></p>}>
-          <ProductsContainer setCartItemCount={setCartItemCount} productsPromise={productsPromise} />
+          <ProductsContainer
+            setCartProduct={setCartProduct}
+            cartProducts={cartProducts}
+            productsPromise={productsPromise}
+          />
         </Suspense>
         <GetStart />
         <Suspense fallback={<p></p>}>
@@ -45,7 +48,7 @@ function App() {
         <Footer />
       </footer>
 
-      <ToastContainer/>
+      <ToastContainer />
     </>
   );
 }

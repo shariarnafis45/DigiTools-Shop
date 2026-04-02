@@ -2,8 +2,8 @@ import React, { use, useState } from "react";
 import ProductsCardContainer from "./ProductsCardContainer"
 import CartProducts from "./CartProducts";
 
-const ProductsContainer = ({ productsPromise, setCartItemCount }) => {
-  const [cartProducts, setCartProduct] = useState([])
+const ProductsContainer = ({ productsPromise, cartProducts,setCartProduct }) => {
+  
   const productsData = use(productsPromise);
   const [tab,SetTab] = useState("products")
   
@@ -26,7 +26,7 @@ const ProductsContainer = ({ productsPromise, setCartItemCount }) => {
       </div>
       <div>
         {
-            tab === "products" ? <ProductsCardContainer setCartItemCount={setCartItemCount} productsData={productsData} setCartProduct={setCartProduct} cartProducts={cartProducts}/> : <CartProducts cartProducts={cartProducts} setCartProduct={setCartProduct}/>
+            tab === "products" ? <ProductsCardContainer   productsData={productsData} setCartProduct={setCartProduct} cartProducts={cartProducts}/> : <CartProducts cartProducts={cartProducts} setCartProduct={setCartProduct}/>
         }
       </div>
 

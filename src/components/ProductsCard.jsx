@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 
-const ProductsCard = ({ product, cartProducts, setCartProduct,setCartItemCount }) => {
+const ProductsCard = ({ product, cartProducts, setCartProduct}) => {
   const [isBuyClicked, setIsBuyClicked] = useState(false);
   const handleBuyNow = (product) => {
     
@@ -10,7 +10,8 @@ const ProductsCard = ({ product, cartProducts, setCartProduct,setCartItemCount }
     });
     setIsBuyClicked(true);
     setCartProduct([...cartProducts, product]);
-    setCartItemCount(cartProducts.length)
+    
+    
     
     
   };
